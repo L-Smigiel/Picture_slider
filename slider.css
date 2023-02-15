@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #23e3c9;
+}
+
+:root {
+  --sliderHeight: calc((85vw / 4.5) * 3);
+}
+
+.slider-2-body {
+  position: relative;
+  width: 95vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-2 {
+  width: 85vw;
+  height: var(--sliderHeight);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  width: 1000%;
+  height: var(--sliderHeight);
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 10%;
+  transition: 1s;
+}
+
+.slide img {
+  width: 85vw;
+  height: var(--sliderHeight);
+  object-fit: cover;
+}
+
+/*css for manual slide navigation*/
+
+.manual-btn {
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  display: block;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #40d3dc;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -10%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -30%;
+}
+
+#radio5:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio6:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio7:checked ~ .first {
+  margin-left: -60%;
+}
+
+#radio8:checked ~ .first {
+  margin-left: -70%;
+}
+
+/*css for navigation*/
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 85vw;
+  justify-content: center;
+  margin-top: calc(var(--sliderHeight) - 4vw);
+}
+
+.navigation-auto div {
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #000;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #000;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #000;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #000;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+  background: #000;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6 {
+  background: #000;
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn7 {
+  background: #000;
+}
+
+#radio8:checked ~ .navigation-auto .auto-btn8 {
+  background: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation-auto {
+    display: none;
+  }
+}
+/* forward/back buttons*/
+
+button.arrow > img {
+  max-width: 52px;
+  width: 5vw;
+  min-width: 40px;
+}
+.arrow {
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9;
+  background-color: initial;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.arrows {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

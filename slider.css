@@ -15,7 +15,8 @@ body {
 .slider-2-body {
   position: relative;
   width: 95vw;
-  display: flex;
+  /*display: flex;*/
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -52,7 +53,7 @@ body {
 /*css for manual slide navigation*/
 
 .manual-btn {
-  border: 2px solid #40d3dc;
+  border: 2px solid #6682a5;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -65,7 +66,7 @@ body {
 }
 
 .manual-btn:hover {
-  background: #40d3dc;
+  background: #4f6f98;
 }
 
 #radio1:checked ~ .first {
@@ -156,7 +157,14 @@ body {
     display: none;
   }
 }
-/* forward/back buttons*/
+/* forward/back buttons */
+
+/*WARNING: Uses these classes from the first slider:
+
+button.arrow > img
+.arrow
+
+Preserve or download from repo if you accidentally delete them.*/
 
 button.arrow > img {
   max-width: 52px;
@@ -176,6 +184,8 @@ button.arrow > img {
   margin: 0;
   padding: 0;
 }
+
+/* This is used exclusively for the second slider: */
 
 .arrows {
   position: absolute;
